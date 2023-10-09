@@ -1,38 +1,214 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --color-orange: #ff5c00;
+  --color-dark: #2a2a2a;
+
+  --body-bg: #fff;
+  --text-color: var(--color-dark);
+  --border-color: var(--color-dark);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  box-shadow: 0 0 10px 5px grey;
+  position: sticky;
+  top: 0;
+  background: var(--body-bg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.header {
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
+}
+
+.navigation {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-left {
+  align-items: center;
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  width: 4px;
+  height: 40%;
+  left: 46%;
+  position: absolute;
+  background: var(--color-orange);
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-section {
+  padding-top: 10rem;
+  color: var(--text-color);
+}
+
+.hero {
+  grid-template-areas: "left right";
+  background: var(--color-orange);
+  padding: 0 2rem;
+}
+
+.left button {
+  background: var(--color-dark);
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.left button a {
+  color: var(--body-bg);
+}
+
+.left {
+  grid-area: left;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  margin: 10vh;
+
 }
 
-.App-link {
-  color: #61dafb;
+.right {
+  grid-area: right;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-resize {
+  height: 32vw;
+  width: 32vw;
+}
+
+.right img {
+  height: 105%;
+}
+
+.banner {
+    
+  margin-top: 7rem;
+  border: 2px solid var(--border-color);
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.banner .info-divider{
+  background: gray;
+  width: 2px;
+  height: 50px;
+}
+
+.banner .info-content .icon-container {
+  background: var(--color-orange);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.banner .info-content .icon-container i{
+  font-size: 2rem;
+  color: #fff;
+}
+
+.banner .info-content span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.banner .info-content p {
+  color: var(--color-orange);
+}
+
+.skills {
+  margin-top: 7rem;
+  padding: 2rem;
+  font-size: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.skills .icon-skill {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills .icon-skill .icon-container i {
+  font-size: 7rem;
+}
+
+/* ------------ project ------------- */
+.project {
+  margin-top: 3rem;
+  padding: 7rem 0;
+}
+
+.project h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project .project-container {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
+
+  /* grid-template-columns: repeat(2, 1fr); */
+
+}
+
+.project-card {
+  box-shadow: -1px 4px 10px 8px rgba(101, 101, 101, 0.244);
+  border-radius: 5px;
+  padding-bottom: 2rem;
+  width: 25vw;
+
+}
+
+.project-card .bottom > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card .bottom i {
+  font-size: 4rem;
+  padding: 4rem;
+  color: var(--color-dark);
+}
+
+.project-card .top img {
+  width: 100%;
 }
