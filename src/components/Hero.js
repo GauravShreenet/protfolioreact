@@ -6,11 +6,11 @@ export const Hero = () => {
     <section id="home" className='container hero-section'>
         <div className="grid hero">
             <div className="left flex">
-                <p>
+                <div>
                     Hi I'm  
-                    <strong> Gaurav Shreenet</strong>
-                </p>
-                <h3>Software Engineer</h3>
+                    <span className='name'> Gaurav Shreenet</span>
+                </div>
+                <div className='tag'>Software Engineer</div>
                 <p>I love coding and want make my skills even better.</p>
 
                 <button>
