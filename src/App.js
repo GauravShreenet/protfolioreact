@@ -20,15 +20,15 @@ function App() {
         </label>
         <NavBar />
         <div className='main'>
-          <Routes>
-            <Route path='/' element={<Hero />} />
-            <Route path='/indo' element={<Indo />} />
-            <Route path='/skills' element={<Skills />} />
-            <Route path='/project' element={<Project />} />
-            <Route path='/aboutus' element={<AboutUs />} />
-            <Route path='/getin' element={<GetIn />} />
-            <Route path='/links' element={<Links />} />
-          </Routes>
+        <Routes>
+          <Route path='/' element={ <Hero />} />
+          <Route path='/indo' element={ <Indo />} />
+          <Route path='/skills' element={ <Skills />} />
+          <Route path='/project' element={ <Project />} />
+          <Route path='/aboutus' element={ <AboutUs />} />
+          <Route path='/getin' element={ <GetIn />} />
+          <Route path='/links' element={ <Links />} />
+        </Routes>
         </div>
         <Footer />
       </div>
