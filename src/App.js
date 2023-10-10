@@ -19,23 +19,17 @@ function App() {
           <i class="fa-solid fa-circle-half-stroke"></i>
         </label>
         <NavBar />
-        <Routes>
-          <Route path='/' element={ <Hero />} />
-          <Route path='/' element={ <Indo />} />
-          <Route path='/' element={ <Skills />} />
-          <Route path='/' element={ <Project />} />
-          <Route path='/' element={ <AboutUs />} />
-          <Route path='/' element={ <GetIn />} />
-          <Route path='/' element={ <Links />} />
-        </Routes>
-        
-        {/* <Hero /> */}
-        {/* <Indo />
-        <Skills />
-        <Project />
-        <AboutUs />
-        <GetIn />
-        <Links /> */}
+        <div className='main'>
+          <Routes>
+            <Route path='/' element={<Hero />} />
+            <Route path='/indo' element={<Indo />} />
+            <Route path='/skills' element={<Skills />} />
+            <Route path='/project' element={<Project />} />
+            <Route path='/aboutus' element={<AboutUs />} />
+            <Route path='/getin' element={<GetIn />} />
+            <Route path='/links' element={<Links />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </>

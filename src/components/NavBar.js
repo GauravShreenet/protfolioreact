@@ -1,24 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const NavBar = () => {
   return (
     <header>
-        <nav className="container flex header">
-            <div className="flex nav-left">
-                <h1>Gaurav</h1>
-                <div className="line">Soft. Engineer</div>
-            </div>
+        <div class="container flex header">
+                <div class="flex logo">
+                    <div>Gaurav</div>
+                    <div class="line">Soft. Engineer</div>
+                </div>
 
-            <div className="menu">
-                <ul className="flex navigation">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Project</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <div class="menu">
+                    <ul class="flex navigation">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/skills" activeStyle>Skills</Link></li>
+                        <li><Link to="/project" activeStyle>Projects</Link></li>
+                        <li><Link to="/aboutus" activeStyle>About</Link></li>
+                        <li><Link to="/getin" activeStyle>Contact</Link></li>
+                    </ul>
+                </div>
             </div>
-        </nav>
     </header>
   )
 }
