@@ -1,4 +1,5 @@
 import './App.css';
+import { About } from './components/About';
 import { Hero } from './components/Hero';
 import { Indo } from './components/Indo';
 import { NavBar } from './components/NavBar';
@@ -13,6 +14,7 @@ function App() {
       <Indo />
       <Skills />
       <Project />
+      <About />
     </div>
   );
 }
