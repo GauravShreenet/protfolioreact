@@ -3,7 +3,7 @@ html {
 }
 
 .main {
-  min-height: 40vw;
+  min-height: 72.55vh;
 }
 
 * {
@@ -142,7 +142,7 @@ label > i {
 
 /* hero section */
 .hero-section {
-  padding-top: 10rem;
+  padding: 10rem 0 5.55rem 0;
   color: var(--text-color);
 }
 
@@ -314,7 +314,7 @@ label > i {
 /* ---------about -------- */
 .about {
   background: rgb(165, 165, 255);
-  padding: 5rem 0; 
+  padding: 5rem 0 3.9rem 0; 
 }
 
 .about content {
@@ -465,7 +465,6 @@ footer {
   width: 100%;
   align-items: center;
   padding: 0.8rem 0;
-  margin-top: 1rem;
 }
 
 @media (max-width: 970px) {
