@@ -72,6 +72,12 @@ header {
   background: var(--body-bg);
 }
 
+.menu-icon{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
 .logo {
   font-size: 1.3rem;
   position: relative;
@@ -210,13 +216,17 @@ label > i {
 }
 
 .banner {
-  
   margin-top: 7rem;
   border: 2px solid var(--border-color);
   padding: 2rem;
+  
+  border-radius: 100px;
+}
+
+.banner .info-first {
   justify-content: space-between;
   align-items: center;
-  border-radius: 100px;
+  width: 100%;
 }
 
 .banner .info-divider{
@@ -225,7 +235,7 @@ label > i {
   height: 50px;
 }
 
-.banner .info-content .icon-container {
+.banner .info-first .info-content .icon-container {
   background: var(--color-orange);
   width: 4rem;
   height: 4rem;
@@ -235,12 +245,12 @@ label > i {
 
 }
 
-.banner .info-content .icon-container i{
+.banner .info-first .info-content .icon-container i{
   font-size: 2rem;
   color: #fff;
 }
 
-.banner .info-content span {
+.banner .info-first .info-content span {
   font-weight: bold;
   font-size: 1.3rem;
   letter-spacing: 2px;
@@ -479,16 +489,63 @@ footer {
 }
 
 @media (max-width: 768px) {
+  
   .hero {
+      padding-bottom: 2rem;
       grid-template-areas: "right"
                            "left";
   }
 
+  .navigation {
+      display: none;
+      flex-direction: column;
+      background: var(--color-dark);
+      position: absolute;
+      top: -100%;
+      left: 60vh;
+      height: auto;
+      width: 100%;
+      z-index: 1000;
+      color: var(--button-text);
+      transition: height 2s ease-in-out;
+  }
+
+  .menu-icon {
+      display: flex;
+  }
+
+  #menu-toggle:checked ~ .navigation {
+      display: flex;
+      top: 6.75vh;
+      margin: 0;
+      overflow: hidden;
+      
+  }
+  
   .left,
   .right {    
       justify-content: center;
   
   }
+
+  .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .banner .info-first {
+      flex-direction: column;
+      align-items: start;
+      
+      width: 30vh;
+  }
+  
+  .banner .info-divider{
+      display: none;
+  }
+
+  
   
   .about .container {
       flex-direction: column;
@@ -498,5 +555,29 @@ footer {
   .alllinks {
       flex-direction: column;
       align-items: center;
+  }
+
+  .scroll-up {
+      height: 8vw;
+      width: 8vw;
+      border-radius: 50%;
+      background: var(--color-orange);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 7vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .getin .button_container a {
+      font-size: 5vw;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .scroll-up {
+      right: 2rem;
+      bottom: 4rem;        
   }
 }

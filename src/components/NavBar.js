@@ -10,6 +10,8 @@ export const NavBar = () => {
                 </div>
 
                 <div class="menu">
+                  <input type="checkbox" id='menu-toggle' style={{display: "none"}}/>
+                  <label for="menu-toggle" className='menu-icon'><strong>&#9776;</strong></label>
                     <ul class="flex navigation">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#skills">Skills</a></li>
