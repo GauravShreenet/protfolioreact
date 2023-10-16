@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const NavBar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // }
+
   return (
     <header>
         <div class="container flex header">
@@ -10,9 +17,10 @@ export const NavBar = () => {
                 </div>
 
                 <div class="menu">
-                  <input type="checkbox" id='menu-toggle' style={{display: "none"}}/>
-                  <label for="menu-toggle" className='menu-icon'><strong>&#9776;</strong></label>
-                    <ul class="flex navigation">
+                  
+                  <button onClick={() => setIsOpen(true)} className='menu-icon'>
+                    <strong>&#9776;</strong></button>
+                    <ul className={`flex navigation ${isOpen ? 'active' : ''}`}>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>

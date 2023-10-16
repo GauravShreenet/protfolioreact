@@ -501,26 +501,31 @@ footer {
       flex-direction: column;
       background: var(--color-dark);
       position: absolute;
-      top: -100%;
-      left: 60vh;
-      height: auto;
+      top: 0;
+      left: -60vh;
+      min-height: 200vh;
       width: 100%;
       z-index: 1000;
       color: var(--button-text);
-      transition: height 2s ease-in-out;
+      transition: left 2s ease-in-out;
+  }
+
+  .navigation.active {
+    left: 64vh;
   }
 
   .menu-icon {
       display: flex;
+      background: transparent;
   }
 
-  #menu-toggle:checked ~ .navigation {
+  /* #menu-toggle:checked ~ .navigation {
       display: flex;
       top: 6.75vh;
       margin: 0;
       overflow: hidden;
       
-  }
+  } */
   
   .left,
   .right {    
